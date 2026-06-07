@@ -1,0 +1,79 @@
+<svg width="950" height="550" xmlns="http://www.w3.org/2000/svg" style="background-color: #1E1E24; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#8F9CAE" />
+      </marker>
+      <marker id="generalization" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="none" stroke="#8F9CAE" stroke-width="1.5" />
+      </marker>
+      <marker id="composition" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 0 6 L 6 0 L 12 6 L 6 12 z" fill="#8F9CAE" />
+      </marker>
+      <marker id="aggregation" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 0 6 L 6 0 L 12 6 L 6 12 z" fill="none" stroke="#8F9CAE" stroke-width="1.5" />
+      </marker>
+    </defs>
+    <text x="30" y="40" fill="#F8FAFC" font-size="20" font-weight="bold">Decorator Design Pattern</text><rect x="350" y="30" width="220" height="90" rx="8" ry="8" fill="#0F172A" stroke="#3B82F6" stroke-width="2" />
+<path d="M 351 38 Q 351 31 358 31 L 562 31 Q 569 31 569 38 L 569 65 L 351 65 Z" fill="#1D4ED8" />
+<text x="460.0" y="44" fill="#60A5FA" font-size="9" font-weight="bold" text-anchor="middle">&lt;&lt;interface&gt;&gt;</text>
+<text x="460.0" y="58" fill="#F1F5F9" font-size="12" font-weight="bold" text-anchor="middle">Coffee</text>
+<line x1="350" y1="65" x2="570" y2="65" stroke="#3B82F6" stroke-width="1" />
+<line x1="350" y1="80" x2="570" y2="80" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3,3" />
+<text x="360" y="95" fill="#CBD5E1" font-size="10" font-family="monospace">+ getDescription(): String</text>
+<text x="360" y="111" fill="#CBD5E1" font-size="10" font-family="monospace">+ getCost(): double</text>
+<rect x="30" y="220" width="180" height="110" rx="8" ry="8" fill="#0F172A" stroke="#2563EB" stroke-width="2" />
+<path d="M 31 228 Q 31 221 38 221 L 202 221 Q 209 221 209 228 L 209 255 L 31 255 Z" fill="#1E3A8A" />
+<text x="120.0" y="242" fill="#F1F5F9" font-size="12" font-weight="bold" text-anchor="middle">SimpleCoffee</text>
+<line x1="30" y1="255" x2="210" y2="255" stroke="#2563EB" stroke-width="1" />
+<line x1="30" y1="270" x2="210" y2="270" stroke="#2563EB" stroke-width="1" stroke-dasharray="3,3" />
+<text x="40" y="285" fill="#CBD5E1" font-size="10" font-family="monospace">+ getDescription()</text>
+<text x="40" y="301" fill="#CBD5E1" font-size="10" font-family="monospace">+ getCost()</text>
+<rect x="230" y="220" width="180" height="110" rx="8" ry="8" fill="#0F172A" stroke="#2563EB" stroke-width="2" />
+<path d="M 231 228 Q 231 221 238 221 L 402 221 Q 409 221 409 228 L 409 255 L 231 255 Z" fill="#1E3A8A" />
+<text x="320.0" y="242" fill="#F1F5F9" font-size="12" font-weight="bold" text-anchor="middle">LatteCoffee</text>
+<line x1="230" y1="255" x2="410" y2="255" stroke="#2563EB" stroke-width="1" />
+<line x1="230" y1="270" x2="410" y2="270" stroke="#2563EB" stroke-width="1" stroke-dasharray="3,3" />
+<text x="240" y="285" fill="#CBD5E1" font-size="10" font-family="monospace">+ getDescription()</text>
+<text x="240" y="301" fill="#CBD5E1" font-size="10" font-family="monospace">+ getCost()</text>
+<rect x="520" y="220" width="220" height="120" rx="8" ry="8" fill="#0F172A" stroke="#64748B" stroke-width="2" />
+<path d="M 521 228 Q 521 221 528 221 L 732 221 Q 739 221 739 228 L 739 255 L 521 255 Z" fill="#1E293B" />
+<text x="630.0" y="234" fill="#94A3B8" font-size="9" font-weight="bold" text-anchor="middle">&lt;&lt;abstract&gt;&gt;</text>
+<text x="630.0" y="248" fill="#F1F5F9" font-size="12" font-weight="bold" font-style="italic" text-anchor="middle">CoffeeDecorator</text>
+<line x1="520" y1="255" x2="740" y2="255" stroke="#64748B" stroke-width="1" />
+<text x="530" y="270" fill="#94A3B8" font-size="10" font-family="monospace"># coffee: Coffee</text>
+<line x1="520" y1="286" x2="740" y2="286" stroke="#64748B" stroke-width="1" stroke-dasharray="3,3" />
+<text x="530" y="301" fill="#CBD5E1" font-size="10" font-family="monospace">+ getDescription()</text>
+<text x="530" y="317" fill="#CBD5E1" font-size="10" font-family="monospace">+ getCost()</text>
+<rect x="430" y="410" width="180" height="110" rx="8" ry="8" fill="#0F172A" stroke="#2563EB" stroke-width="2" />
+<path d="M 431 418 Q 431 411 438 411 L 602 411 Q 609 411 609 418 L 609 445 L 431 445 Z" fill="#1E3A8A" />
+<text x="520.0" y="432" fill="#F1F5F9" font-size="12" font-weight="bold" text-anchor="middle">MilkDecorator</text>
+<line x1="430" y1="445" x2="610" y2="445" stroke="#2563EB" stroke-width="1" />
+<line x1="430" y1="460" x2="610" y2="460" stroke="#2563EB" stroke-width="1" stroke-dasharray="3,3" />
+<text x="440" y="475" fill="#CBD5E1" font-size="10" font-family="monospace">+ getDescription()</text>
+<text x="440" y="491" fill="#CBD5E1" font-size="10" font-family="monospace">+ getCost()</text>
+<rect x="650" y="410" width="180" height="110" rx="8" ry="8" fill="#0F172A" stroke="#2563EB" stroke-width="2" />
+<path d="M 651 418 Q 651 411 658 411 L 822 411 Q 829 411 829 418 L 829 445 L 651 445 Z" fill="#1E3A8A" />
+<text x="740.0" y="432" fill="#F1F5F9" font-size="12" font-weight="bold" text-anchor="middle">SugarDecorator</text>
+<line x1="650" y1="445" x2="830" y2="445" stroke="#2563EB" stroke-width="1" />
+<line x1="650" y1="460" x2="830" y2="460" stroke="#2563EB" stroke-width="1" stroke-dasharray="3,3" />
+<text x="660" y="475" fill="#CBD5E1" font-size="10" font-family="monospace">+ getDescription()</text>
+<text x="660" y="491" fill="#CBD5E1" font-size="10" font-family="monospace">+ getCost()</text>
+<rect x="30" y="30" width="180" height="80" rx="8" ry="8" fill="#0F172A" stroke="#2563EB" stroke-width="2" />
+<path d="M 31 38 Q 31 31 38 31 L 202 31 Q 209 31 209 38 L 209 65 L 31 65 Z" fill="#1E3A8A" />
+<text x="120.0" y="52" fill="#F1F5F9" font-size="12" font-weight="bold" text-anchor="middle">DecoratorDemo</text>
+<line x1="30" y1="65" x2="210" y2="65" stroke="#2563EB" stroke-width="1" />
+<line x1="30" y1="80" x2="210" y2="80" stroke="#2563EB" stroke-width="1" stroke-dasharray="3,3" />
+<text x="40" y="95" fill="#CBD5E1" font-size="10" font-family="monospace">+ main(args: String[])</text>
+<line x1="120" y1="220" x2="360" y2="120" stroke="#64748B" stroke-width="1.5" marker-end="url(#generalization)" stroke-dasharray="4,4" />
+<text x="240.0" y="164.0" fill="#94A3B8" font-size="9" text-anchor="middle">implements</text>
+<line x1="320" y1="220" x2="430" y2="120" stroke="#64748B" stroke-width="1.5" marker-end="url(#generalization)" stroke-dasharray="4,4" />
+<text x="375.0" y="164.0" fill="#94A3B8" font-size="9" text-anchor="middle">implements</text>
+<line x1="630" y1="220" x2="500" y2="120" stroke="#64748B" stroke-width="1.5" marker-end="url(#generalization)" stroke-dasharray="4,4" />
+<text x="565.0" y="164.0" fill="#94A3B8" font-size="9" text-anchor="middle">implements</text>
+<path d="M 740 280 L 800 280 L 800 75 L 570 75" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"  />
+<text x="800.0" y="171.5" fill="#94A3B8" font-size="9" text-anchor="middle">wraps</text>
+<line x1="520" y1="410" x2="600" y2="340" stroke="#64748B" stroke-width="1.5" marker-end="url(#generalization)"  />
+<text x="560.0" y="369.0" fill="#94A3B8" font-size="9" text-anchor="middle">extends</text>
+<line x1="740" y1="410" x2="660" y2="340" stroke="#64748B" stroke-width="1.5" marker-end="url(#generalization)"  />
+<text x="700.0" y="369.0" fill="#94A3B8" font-size="9" text-anchor="middle">extends</text>
+<line x1="210" y1="70" x2="350" y2="70" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"  /></svg>
