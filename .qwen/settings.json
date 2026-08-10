@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__parallel-search__web_search",
+      "Bash(mkdir *)"
+    ]
+  },
+  "$version": 4
+}

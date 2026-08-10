@@ -1,0 +1,97 @@
+agent:
+  max_steps: 20
+  max_retries: 3
+  default_timeout: 30
+  working_dir: "~/.agent/workspace"
+  system_prompt: |
+    You are an autonomous agent that completes tasks using the ReAct pattern.
+    You have access to a set of tools. Use them wisely.
+    Think step by step. Be concise but thorough.
+
+gateway:
+  primary: "openai"
+  fallback: "anthropic"
+  timeout: 60
+  max_retries: 3
+  models:
+    planner: "gpt-4o-mini"
+    executor: "gpt-4o"
+    observer: "gpt-4o-mini"
+    judge: "claude-3.5-sonnet"
+  routing:
+    simple_tasks: "gpt-4o-mini"
+    complex_tasks: "gpt-4o"
+    code_tasks: "claude-3.5-sonnet"
+    fallback_models:
+      - "gpt-4o-mini"
+      - "claude-3.5-haiku"
+
+guardrails:
+  rate_limits:
+    requests_per_minute: 60
+    tokens_per_minute: 100000
+    cost_per_hour_usd: 10.0
+  fs_jail:
+    allowed_paths:
+      - "~/projects"
+      - "/tmp/agent"
+    denied_patterns:
+      - "~/.ssh"
+      - "~/.aws"
+      - "/etc"
+      - "/root"
+      - "/home/*/.ssh"
+  command_filter:
+    mode: "allowlist"
+    allowed_commands:
+      read: ["cat", "head", "tail", "less", "grep", "rg", "find", "wc", "ls", "tree"]
+      write: ["tee", "echo", "printf", "cat"]
+      list: ["ls", "tree", "find"]
+      git: ["git status", "git diff", "git log", "git show", "git branch"]
+      python: ["python", "python3", "pip", "uv"]
+      test: ["pytest", "python -m pytest", "python -m unittest"]
+      build: ["make", "cargo", "npm", "uv build"]
+    denied_patterns:
+      - "rm\\s+-rf"
+      - "sudo"
+      - "chmod\\s+777"
+      - ">\\s*/dev/"
+      - "curl.*\\|.*sh"
+      - "wget.*\\|.*sh"
+      - "chown"
+      - "chgrp"
+      - "mount"
+      - "umount"
+      - "dd"
+      - "mkfs"
+  pii_detection: true
+  secrets_detection: true
+  max_output_length: 100000
+
+observability:
+  tracing:
+    enabled: true
+    endpoint: "http://localhost:4317"
+    service_name: "autonomous-agent"
+    sample_rate: 1.0
+  logging:
+    level: "INFO"
+    format: "json"
+    output: "stdout"
+  cost_tracking: true
+  metrics_port: 9090
+
+mcp:
+  enabled: false
+  transport: "stdio"
+  host: "localhost"
+  port: 8000
+  auth:
+    enabled: false
+    type: "none"
+
+workspace:
+  root: "~/.agent/workspace"
+  temp_dir: "/tmp/agent"
+  max_file_size_mb: 10
+  allowed_extensions: [".py", ".txt", ".md", ".json", ".yaml", ".yml", ".toml", ".cfg", ".ini", ".sh", ".js", ".ts", ".html", ".css", ".sql", ".csv"]
