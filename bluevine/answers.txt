@@ -1,0 +1,32 @@
+Q1: 395 unique books
+Q2: The Night Circus -- 14 ISBNs
+Q3: 172 books
+Q4: 61 books
+Q5: publishers
+HarperCollins                       48
+HarperCollins Publishers            42
+Orbit                               39
+Voyager                             28
+Vintage                             18
+Oxford University Press             15
+Del Rey                             14
+Harper Voyager                      14
+Harper & Row                        14
+Eos                                 12
+HarperCollins Publishers Limited    11
+Warner Books                        10
+Ballantine Books                     9
+Random House Publishing Group        9
+Putnam                               8
+HarperTrophy                         7
+Caedmon                              7
+Bantam Books                         7
+Vintage Books                        7
+HarperAudio                          6
+Q6: 342.0
+Q7: May (24)
+Question 8 was pretty hard :(
+Q9: 'Warm Worlds and Otherwise' (2021)
+Q10 No last_modified data available in the dataset.
+Q11: Robin Hobb - 38 titles
+Q12 was pretty hard :(

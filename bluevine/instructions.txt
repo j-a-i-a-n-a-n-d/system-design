@@ -1,0 +1,7 @@
+- To Run this solution one need 'requests', 'pandas'
+- tested on MacOS and Python version '3.9.6'
+- Steps to run the code
+  - run the data_ingestion.py to create the preprocessed csv file
+  - then run the solution.py to get the answers to the questions
+  - isbns.txt defines which all data will be fetched from OpenLibrary
+  - API calls happen one by one, several minutes required to run it entirely
