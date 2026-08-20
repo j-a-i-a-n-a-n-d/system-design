@@ -1,0 +1,205 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage{geometry}
+\geometry{
+  letterpaper,
+  top=0.45in,
+  bottom=0.45in,
+  left=0.45in,
+  right=0.45in
+}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\input{glyphtounicode}
+
+% Set line-breaking tolerances to prevent margin overflow with justified text
+\emergencystretch=2em
+\tolerance=1500
+\hfuzz=1pt
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\urlstyle{same}
+
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Redefine normalsize to be exactly 10.4pt with 12.65pt leading (line height)
+\renewcommand{\normalsize}{%
+  \fontsize{10.1}{12.25}\selectfont
+}
+\normalsize
+
+% Sections formatting - using titlesec with proper and consistent spacing
+\titleformat{\section}{
+  \scshape\raggedright\normalsize\bfseries
+}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% Ensure that generated PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+%----------FONT OPTIONS----------
+% Default LaTeX serif font
+
+%-------------------------
+% Custom commands matching dest.tex's original layout structure
+
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize#1} & \textbf{\normalsize#2} \\
+      {\normalsize#3} & {\normalsize#4} \\
+    \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize#1 & \textbf{\normalsize#2}\\
+    \end{tabular*}\vspace{2pt}
+}
+
+% Global itemize configurations using enumitem for perfect consistency
+\setlist[itemize]{
+  leftmargin=0.13in,
+  label={$\vcenter{\hbox{\tiny$\bullet$}}$},
+  itemsep=1.5pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% Command definitions for list wrapper boundaries
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, itemsep=6pt, topsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{JAI ANAND}} \\ \vspace{4pt}
+    \small
+    \href{tel:+918923074394}{\underline{+91 8923074394}} ~~\textbullet~~ 
+    \href{mailto:jaianand5789@gmail.com}{\underline{jaianand5789@gmail.com}} ~~\textbullet~~ 
+    \href{https://linkedin.com/in/jaiiianand/}{\underline{linkedin.com/in/jaiiianand}} ~~\textbullet~~ 
+    \href{https://github.com/j-a-i-a-n-a-n-d}{\underline{github.com/j-a-i-a-n-a-n-d}} ~~\textbullet~~
+    Gurgaon, India
+\end{center}
+
+%-----------SUMMARY-----------
+\section{SUMMARY}
+Software Engineer with \textbf{2.5+ years} building \textbf{Python services} and applied \textbf{GenAI systems} that engineering teams use day to day. Splits time between \textbf{backend API} work, \textbf{event-driven integrations} on \textbf{AWS}, and \textbf{retrieval-augmented / agentic AI tooling}, with a bias toward shipping something people actually adopt over building the theoretically perfect pipeline.
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+  \begin{itemize}[leftmargin=0.0in, label={}, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \normalsize{
+     \textbf{\normalsize Languages:}{ Python, TypeScript, JavaScript, SQL, PL/SQL, Bash}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Backend Frameworks:}{ \textbf{Django REST Framework}, Node.js, Graphene, Spring Boot}
+    }
+    \item \normalsize{
+     \textbf{\normalsize GenAI / LLM Stack:}{ \textbf{RAG}, \textbf{MCP (Model Context Protocol)}, LangGraph, LangChain, Pinecone, ChromaDB}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Event-Driven \& Messaging:}{ \textbf{Apache Kafka}, SQS, SES, EventBridge, Step Functions}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Cloud \& DevOps:}{ \textbf{AWS} (ECS Fargate, Lambda, CloudFormation, CloudWatch), Docker, Kubernetes, GitHub Actions}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Databases:}{ PostgreSQL, MongoDB, Redis, Oracle}
+    }
+  \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Yamaha Motors Solutions}{July 2024 -- Present}
+      {Software Development Engineer I}{New Delhi, India}
+      \resumeItemListStart
+        \resumeItem{Shipped a \textbf{RAG-based MCP} server for the internal frontend framework, adopted by \textbf{100+ engineers} as a daily development tool.}
+        \resumeItem{Co-led \textbf{GenAI/Agentic AI} adoption on the \textbf{AI Committee}, cutting manual effort on legacy application migration assessments by more than \textbf{50\%}.}
+        \resumeItem{Decomposed a monolithic warranty/service/recall workflow into \textbf{event-driven services} using \textbf{SQS} and \textbf{SES}, reducing peak API latency by \textbf{25\%}.}
+        \resumeItem{Replaced \textbf{EC2}-based batch processing with \textbf{EventBridge}-triggered \textbf{Step Functions}, raising success rates to \textbf{99.9\%} and cutting infrastructure spend by up to \textbf{88\%}.}
+        \resumeItem{Rolled out \textbf{Cognito}-based SSO for \textbf{1000+ external vendor accounts} alongside \textbf{MSAL} integration for internal identity.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {vXecute Inc}{January 2024 -- July 2024}
+      {Software Engineer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Engineered Python data-ingestion pipelines wired to \textbf{Kafka}, \textbf{GenAI} models, and a \textbf{Pinecone} vector store, improving processing efficiency by \textbf{30\%}.}
+        \resumeItem{Architected the core product infrastructure for \textbf{Staffagent.ai}, an AI-driven recruitment platform, contributing to an \textbf{80\%} cut in customer time-to-hire.}
+        \resumeItem{Migrated \textbf{Kafka} from a local Docker Compose instance to a production multi-broker cluster, increasing throughput by \textbf{50\%} through partition tuning.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{CI/CD Setup \& Infrastructure Automation} $|$ \textnormal{Terraform, Docker, GitHub Actions, Nginx, TypeScript, Next.js}}{}
+      \resumeItemListStart
+        \resumeItem{Established a \textbf{GitHub Actions} CI/CD pipeline for a containerized service, cutting deployment time to under \textbf{5 minutes}.}
+        \resumeItem{Provisioned and automated a \textbf{3-tier cloud VM environment} with \textbf{Terraform} and fronted it with \textbf{Nginx} for zero-downtime blue-green rollouts.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+  \resumeItemListStart
+    \resumeItem{Earned consecutive \textbf{``Star Technical Performer''} recognition in \textbf{Q4 2025} and \textbf{Q2 2026}, delivering exceptional technical execution at \textbf{Yamaha Motors Solutions}.}
+    \resumeItem{Secured \textbf{3rd Rank} in the \textbf{Yamaha AI 2.0 Hackathon} held at Chitkara University amongst \textbf{104 teams}.}
+    \resumeItem{Qualified \textbf{GATE CS 2025} with a \textbf{93.45 percentile}, reflecting a strong foundation in core CS fundamentals.}
+    \resumeItem{Ranked in the \textbf{Top 200 Teams} amongst \textbf{150,000+ participants} at \textbf{Flipkart GRID 5.0}.}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Graphic Era University}{July 2020 -- May 2024}
+      {Bachelor of Technology, Computer Science \& Engineering \textbf{(CGPA: 9.28/10)}}{Uttarakhand, India}
+  \resumeSubHeadingListEnd
+
+\end{document}

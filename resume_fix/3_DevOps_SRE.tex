@@ -1,0 +1,208 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage{geometry}
+\geometry{
+  letterpaper,
+  top=0.45in,
+  bottom=0.45in,
+  left=0.45in,
+  right=0.45in
+}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\input{glyphtounicode}
+
+% Set line-breaking tolerances to prevent margin overflow with justified text
+\emergencystretch=2em
+\tolerance=1500
+\hfuzz=1pt
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\urlstyle{same}
+
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Redefine normalsize to be exactly 10.4pt with 12.65pt leading (line height)
+\renewcommand{\normalsize}{%
+  \fontsize{10.1}{12.25}\selectfont
+}
+\normalsize
+
+% Sections formatting - using titlesec with proper and consistent spacing
+\titleformat{\section}{
+  \scshape\raggedright\normalsize\bfseries
+}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% Ensure that generated PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+%----------FONT OPTIONS----------
+% Default LaTeX serif font
+
+%-------------------------
+% Custom commands matching dest.tex's original layout structure
+
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize#1} & \textbf{\normalsize#2} \\
+      {\normalsize#3} & {\normalsize#4} \\
+    \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize#1 & \textbf{\normalsize#2}\\
+    \end{tabular*}\vspace{2pt}
+}
+
+% Global itemize configurations using enumitem for perfect consistency
+\setlist[itemize]{
+  leftmargin=0.13in,
+  label={$\vcenter{\hbox{\tiny$\bullet$}}$},
+  itemsep=1.5pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% Command definitions for list wrapper boundaries
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, itemsep=6pt, topsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{JAI ANAND}} \\ \vspace{4pt}
+    \small
+    \href{tel:+918923074394}{\underline{+91 8923074394}} ~~\textbullet~~ 
+    \href{mailto:jaianand5789@gmail.com}{\underline{jaianand5789@gmail.com}} ~~\textbullet~~ 
+    \href{https://linkedin.com/in/jaiiianand/}{\underline{linkedin.com/in/jaiiianand}} ~~\textbullet~~ 
+    \href{https://github.com/j-a-i-a-n-a-n-d}{\underline{github.com/j-a-i-a-n-a-n-d}} ~~\textbullet~~
+    Gurgaon, India
+\end{center}
+
+%-----------SUMMARY-----------
+\section{SUMMARY}
+DevOps-minded engineer with \textbf{2.5+ years} responsible for the health of production \textbf{AWS environments} --- from provisioning and \textbf{IaC} to the incident that wakes you up at 2am. Spends more time thinking about \textbf{failure modes}, \textbf{observability}, and \textbf{blast radius} than about new features, and treats \textbf{security} and \textbf{cost} as core engineering concerns, not someone else's job.
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+  \begin{itemize}[leftmargin=0.0in, label={}, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \normalsize{
+     \textbf{\normalsize Cloud:}{ \textbf{AWS} (ECS Fargate, EC2, Lambda, Step Functions, EventBridge, SQS, SES, ALB, VPC/DMZ), Azure (working exposure)}
+    }
+    \item \normalsize{
+     \textbf{\normalsize IaC \& Automation:}{ \textbf{CloudFormation}, Terraform, Ansible, Bash, Python}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Containers \& Orchestration:}{ Docker, Kubernetes}
+    }
+    \item \normalsize{
+     \textbf{\normalsize CI/CD:}{ GitHub Actions, Nginx (reverse proxy / load balancing / blue-green)}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Monitoring \& Support:}{ CloudWatch, Grafana, Prometheus, incident detection \& response (MTTD/MTTR)}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Security \& Compliance:}{ CSPM remediation, network segmentation/DMZ, \textbf{PKCE OAuth2.0/OIDC}, MSAL/Cognito}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Languages \& Databases:}{ Python, Bash, SQL, PostgreSQL, MongoDB, Redis}
+    }
+  \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Yamaha Motors Solutions}{July 2024 -- Present}
+      {Software Development Engineer I}{New Delhi, India}
+      \resumeItemListStart
+        \resumeItem{Centralized \textbf{ECS} and \textbf{EC2} logs into \textbf{CloudWatch}, reducing mean-time-to-detection (MTTD) for production incidents by \textbf{45\%}.}
+        \resumeItem{Automated infrastructure provisioning with \textbf{CloudFormation} and remediated \textbf{CSPM} findings, eliminating \textbf{70\%} of manual configuration overhead.}
+        \resumeItem{Migrated \textbf{EC2}-based batch jobs to \textbf{EventBridge}-triggered \textbf{Step Functions}, lifting reliability to a \textbf{99.9\%} success rate and cutting infra costs by up to \textbf{88\%}.}
+        \resumeItem{Orchestrated the migration of an on-premises network to the cloud and established a \textbf{DMZ} isolating OT systems, shrinking the external attack surface by \textbf{60\%}.}
+        \resumeItem{Deployed \textbf{Y-DMS} onto \textbf{ECS Fargate} behind dual public/private ALBs, reducing cross-service latency by \textbf{30\%} and containing blast radius between services.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {vXecute Inc}{January 2024 -- July 2024}
+      {Software Engineer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Managed and operated \textbf{Apache Kafka} in production, scaling from Docker Compose to a tuned multi-broker cluster, increasing throughput by \textbf{50\%}.}
+        \resumeItem{Optimized data pipeline reliability by co-architecting Python/Kafka ingestion services, improving processing efficiency by \textbf{30\%}.}
+        \resumeItem{Reduced perceived response time by \textbf{40\%} by offloading long-running work to background jobs with \textbf{Oban} on Elixir/Phoenix.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{CI/CD Setup \& Infrastructure Automation} $|$ \textnormal{Terraform, Docker, GitHub Actions, Ansible, Nginx}}{}
+      \resumeItemListStart
+        \resumeItem{Engineered a \textbf{GitHub Actions + Ansible} CI/CD pipeline from scratch for a containerized microservices application, reducing deploy times to under \textbf{5 minutes}.}
+        \resumeItem{Provisioned a \textbf{3-tier cloud VM architecture} with \textbf{Terraform} and configured \textbf{Nginx} for health-checked, zero-downtime blue-green deployments.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+  \resumeItemListStart
+    \resumeItem{Earned consecutive \textbf{``Star Technical Performer''} recognition in \textbf{Q4 2025} and \textbf{Q2 2026}, delivering exceptional technical execution at \textbf{Yamaha Motors Solutions}.}
+    \resumeItem{Secured \textbf{3rd Rank} in the \textbf{Yamaha AI 2.0 Hackathon} held at Chitkara University amongst \textbf{104 teams}.}
+    \resumeItem{Qualified \textbf{GATE CS 2025} with a \textbf{93.45 percentile}, reflecting a strong foundation in core CS fundamentals.}
+    \resumeItem{Ranked in the \textbf{Top 200 Teams} amongst \textbf{150,000+ participants} at \textbf{Flipkart GRID 5.0}.}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Graphic Era University}{July 2020 -- May 2024}
+      {Bachelor of Technology, Computer Science \& Engineering \textbf{(CGPA: 9.28/10)}}{Uttarakhand, India}
+  \resumeSubHeadingListEnd
+
+\end{document}

@@ -1,0 +1,201 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage{geometry}
+\geometry{
+  letterpaper,
+  top=0.45in,
+  bottom=0.45in,
+  left=0.45in,
+  right=0.45in
+}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\input{glyphtounicode}
+\pagestyle{empty}
+% Set line-breaking tolerances to prevent margin overflow with justified text
+\emergencystretch=2em
+\tolerance=1500
+\hfuzz=1pt
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\urlstyle{same}
+
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Redefine normalsize to be exactly 10.4pt with 12.65pt leading (line height)
+\renewcommand{\normalsize}{%
+  \fontsize{10.1}{12.25}\selectfont
+}
+\normalsize
+
+% Sections formatting - using titlesec with proper and consistent spacing
+\titleformat{\section}{
+  \scshape\raggedright\normalsize\bfseries
+}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% Ensure that generated PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+%----------FONT OPTIONS----------
+% Default LaTeX serif font
+
+%-------------------------
+% Custom commands matching dest.tex's original layout structure
+
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize#1} & \textbf{\normalsize#2} \\
+      {\normalsize#3} & {\normalsize#4} \\
+    \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize#1 & \textbf{\normalsize#2}\\
+    \end{tabular*}\vspace{2pt}
+}
+
+% Global itemize configurations using enumitem for perfect consistency
+\setlist[itemize]{
+  leftmargin=0.13in,
+  label={$\vcenter{\hbox{\tiny$\bullet$}}$},
+  itemsep=1.5pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% Command definitions for list wrapper boundaries
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, itemsep=6pt, topsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{JAI ANAND}} \\ \vspace{4pt}
+    \large \textbf{Data Analyst \textbar{} System Analyst \textbar{} Business Data Analyst } \\ \vspace{6pt}
+    \small
+    \href{tel:+918923074394}{\underline{+91 8923074394}} ~~\textbullet~~ 
+    \href{mailto:jaianand5789@gmail.com}{\underline{jaianand5789@gmail.com}} ~~\textbullet~~ 
+    \href{https://linkedin.com/in/jaiiianand/}{\underline{linkedin.com/in/jaiiianand}} ~~\textbullet~~ 
+    \href{https://github.com/j-a-i-a-n-a-n-d}{\underline{github.com/j-a-i-a-n-a-n-d}} ~~\textbullet~~
+    Gurgaon, India
+\end{center}
+
+%-----------SUMMARY-----------
+\section{SUMMARY}
+Data-focused engineer with \textbf{2.5+ years} of experience analyzing operational data, building reports, optimizing SQL queries, and translating business requirements into data-driven solutions. Experienced in \textbf{SQL, Python, PostgreSQL, Oracle, data analysis, data modeling, KPI reporting, and data validation}, with hands-on experience working with large-scale enterprise datasets and cross-functional stakeholders.
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+  \begin{itemize}[leftmargin=0.0in, label={}, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \normalsize{
+     \textbf{\normalsize Data Analytics \& BI:}{ SQL, Python, Qlik, Power BI, Looker, KPI reporting, dashboard development, data visualization, data analysis, trend analysis, ad-hoc analysis,}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Data Management:}{ Data cleaning, data validation, data transformation, data modeling, ETL/ELT, data reconciliation, data quality, business requirements analysis}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Data Infrastructure:}{ Kafka, Flink, AWS CloudWatch, AWS Step Functions, data pipelines, distributed data processing}
+    }
+    \item \normalsize{
+     \textbf{\normalsize Tools:}{ Postman, Jira, Grafana, Prometheus, Git, Linux, REST APIs}
+    }
+  \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Yamaha Motors Solutions}{July 2024 -- Present}
+      {Data Analyst I}{New Delhi, India}
+      \resumeItemListStart
+        \resumeItem{Analyzed and validated \textbf{inventory and transaction data} for the YIMM factory, redesigning the Inventory Revaluation workflow to achieve \textbf{99.9\% stock-calculation accuracy} across \textbf{50+ warehouses}.}
+        \resumeItem{Optimized complex \textbf{SQL queries, indexing, and data partitioning} for enterprise reporting workloads, reducing analytical report latency to \textbf{sub-300ms p95}.}
+        \resumeItem{Developed \textbf{Qlik/QlikView reports and analytical views}, investigating data discrepancies and translating business requirements into actionable reporting and KPI insights.}
+        \resumeItem{Built \textbf{CloudWatch monitoring and operational dashboards} across ECS/EC2, analyzing application and infrastructure metrics to reduce mean-time-to-detection (MTTD) by \textbf{45\%}.}
+        \resumeItem{Performed \textbf{root-cause analysis and data reconciliation} across warranty, service, and recall workflows, restructuring asynchronous data processing with \textbf{SQS/SES} and reducing peak latency by \textbf{25\%}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {vXecute Inc}{January 2024 -- July 2024}
+      {Software Engineer I}{Remote}
+      \resumeItemListStart
+        \resumeItem{Analyzed \textbf{data ingestion pipelines and processing workflows} across microservices, identifying bottlenecks and improving overall processing efficiency by \textbf{30\%}.}
+        \resumeItem{Designed analytics and reporting structures for \textbf{Staffagent.ai}, analyzing recruitment workflow data and contributing to an \textbf{80\% reduction in customer time-to-hire}.}
+        \resumeItem{Analyzed and optimized \textbf{Kafka data pipelines}, evaluating partitioning and throughput patterns to increase processing throughput by \textbf{50\%}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Retail Sales Analytics \& Forecasting} $|$ \textnormal{Python, SQL, DuckDB, Polars, Plotly}}{}
+      \resumeItemListStart
+        \resumeItem{Built an end-to-end \textbf{sales analytics pipeline} to clean, transform, and analyze transactional data, identifying \textbf{product, regional, and seasonal revenue trends} through interactive KPI dashboards.}
+        \resumeItem{Developed \textbf{time-series demand forecasting} and anomaly detection workflows to identify underperforming products and unusual sales patterns, enabling data-driven inventory decisions.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+  \resumeItemListStart
+    \resumeItem{Earned consecutive \textbf{``Star Technical Performer''} recognition in \textbf{Q4 2025} and \textbf{Q2 2026}, delivering exceptional technical execution at \textbf{Yamaha Motors Solutions}.}
+    \resumeItem{Secured \textbf{3rd Rank} in the \textbf{Yamaha AI 2.0 Hackathon} held at Chitkara University amongst \textbf{104 teams}.}
+    \resumeItem{Qualified \textbf{GATE CS 2025} with a \textbf{93.45 percentile}, reflecting a strong foundation in core CS fundamentals.}
+    \resumeItem{Ranked in the \textbf{Top 200 Teams} amongst \textbf{150,000+ participants} at \textbf{Flipkart GRID 5.0}.}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Graphic Era University}{July 2020 -- May 2024}
+      {Bachelor of Technology, Computer Science \& Engineering \textbf{(CGPA: 9.28/10)}}{Uttarakhand, India}
+  \resumeSubHeadingListEnd
+
+\end{document}
+```
